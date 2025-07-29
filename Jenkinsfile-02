@@ -9,12 +9,12 @@ pipeline {
             }
         }
 
-        stage('validate') {
+        stage('package') {
             steps {
                 bat 'mvn validate'
             }
         }
-
+    
         stage('compile') {
             steps {
                 bat 'mvn compile'
